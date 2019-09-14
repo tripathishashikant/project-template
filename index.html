@@ -6,7 +6,12 @@
   <!-- meta tags -->
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self' data:; 
+  script-src 'self' 'unsafe-inline' code.jquery.com;
+  connect-src 'self';
+  img-src 'self' data:; 
+  style-src 'self' fonts.googleapis.com;
+  font-src 'self' data: fonts.gstatic.com">
   <meta name="description" content="Basic project template for building static website.">
   <meta name="Keyword" content="Basic Project Template, Project Template">
   <meta name="author" content="Shashikant">
@@ -43,22 +48,21 @@
 
 <body id="homepage" class="homepage">
 
-  <!-- skip to mail content -->
-  <a href="#mainContent" class="visually-hidden">
-    Skip to main content
-  </a>
+  <section class="page">
+    <!-- skip to mail content -->
+    <a href="#mainContent" class="visually-hidden">
+      Skip to main content
+    </a>
 
-  <header></header>
+    <header></header>
 
-  <main id="mainContent"></main>
+    <main id="mainContent"></main>
 
-  <footer></footer>
+    <footer></footer>
+  </section>
 
   <!-- common js file -->
   <script src="https://code.jquery.com/jquery-3.3.1.min.js" type="application/javascript"></script>
   <script src="./dist/js/scripts.js" type="application/javascript"></script>
-  <script src="skip-link-focus.js"></script>
-  <script>skipLinkFocus.init();</script>
 </body>
-
 </html>
