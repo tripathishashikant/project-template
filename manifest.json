@@ -1,0 +1,53 @@
+{
+	"manifest_version": 2,
+	"short_name": "Spalt",
+	"name": "Spalt-Online",
+	"version": "v1.0",
+	"content_security_policy": "script-src 'self' https://*.adobedtm.com/  'unsafe-eval' 'unsafe-inline'; object-src 'self'; img-src 'self' https://stats.g.doubleclick.net/",
+	"background_color": "#fff",
+	"theme_color": "#173769",
+	"icons": [
+		{
+			"src": "/images/icons/favicon-16x16.png",
+			"sizes": "16x16",
+			"type": "image/png",
+			"density": "4.0"
+		},
+		{
+			"src": "/images/icons/favicon-32x32.png",
+			"sizes": "32x32",
+			"type": "image/png",
+			"density": "4.0"
+		},
+		{
+			"src": "/images/icons/favicon-96x96.png",
+			"sizes": "96x96",
+			"type": "image/png",
+			"density": "4.0"
+		},
+		{
+			"src": "/images/icons/favicon-180x180.png",
+			"sizes": "180x180",
+			"type": "image/png",
+			"density": "4.0"
+		},
+		{
+			"src": "/images/icons/favicon-192x192.png",
+			"sizes": "192x192",
+			"type": "image/png",
+			"density": "4.0"
+		},
+		{
+			"src": "/images/icons/favicon-512x512.png",
+			"sizes": "512x512",
+			"type": "image/png",
+			"density": "4.0"
+		}
+	],
+	"start_url": "/index.html",
+	"scope": ".",
+	"orientation": "portrait-primary",
+	"display": "standalone",
+	"dir": "ltr",
+	"lang": "de"
+}

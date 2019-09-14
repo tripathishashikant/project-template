@@ -1,0 +1,9 @@
+/* ---------- menu starts ---------- */
+.menu{
+    &__item--current{
+        .menu__link{
+            border-bottom-color:$secondary-color-8;
+        }
+    }
+}
+/* ---------- menu ends ---------- */

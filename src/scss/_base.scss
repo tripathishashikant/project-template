@@ -1,0 +1,207 @@
+/* ========== reset css starts ========== */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* ========== reset css ends ========== */
+
+/* ========== variables starts ========== */
+
+/* ---------- colors starts ---------- */
+$primary-color:#000;
+$secondary-color-0:#fff;   // white
+$secondary-color-1:#000;   // black
+$secondary-color-2:#837f7c;    // grey
+$secondary-color-3:#173769;    // blue
+$secondary-color-4:#f6f6f6; // lightgrey
+$secondary-color-5:#00aeef; // blue in background
+$secondary-color-6:#00134b; // blue in first version of text
+$secondary-color-7:#404d5e; // blue in second version of text
+$secondary-color-8:#f8971d; // yellow
+$secondary-color-9:#003BF1; // blue in link
+$secondary-color-10:#66CEF5;
+$secondary-color-11:#ececec;
+$secondary-color-12:#37474f;
+$secondary-color-13:#757575;
+$secondary-color-14:#ebebeb;
+$secondary-color-15:#2c3540;
+/* ---------- colors ends ---------- */
+
+/* ---------- media queries starts ---------- */
+$col-xss-max: "all and (max-width: 480px)";
+$col-xs-max: "all and (max-width: 767px)";
+$col-sm-max: "all and (max-width: 991px)";
+/* ---------- media queries ends ---------- */
+
+$heightLine: 1.5rem ;
+
+/* ========== variables ends ========== */
+
+/* ---------- extends starts ---------- */
+%float100{
+	float:left;
+	width:100%;
+}
+%btn{
+	display:inline-block;
+	padding:1rem 2.3rem;
+	font-size:1.6rem;
+	line-height:normal;
+	color:$secondary-color-0;
+	text-decoration:none;
+	text-transform:uppercase;
+	background:$secondary-color-8;
+	border:0 none;
+	&:hover{
+		color:$secondary-color-0;
+		text-decoration:none;
+	}
+}
+/* ---------- extends ends ---------- */
+
+/* ========== base style starts ========== */
+.container-fluid{
+	max-width:960px;
+	width:100%;
+}
+
+html{
+    font-size:10px;
+}
+
+body{
+	font-family:'Open Sans', Arial, sans-serif;
+	font-size:1.8rem;
+	line-height:1.333;
+	color:$secondary-color-7;
+	background-color:$secondary-color-0;
+}
+
+p{
+	margin-bottom:1.7rem;
+}
+
+a{
+	color:$secondary-color-9;
+	text-decoration:underline;
+	&:hover,
+	&:focus{
+		color:$secondary-color-9;
+		text-decoration:none;
+	}
+}
+
+h1{
+	font-size:3.4rem;
+	line-height:normal;
+	color:$secondary-color-8;
+	margin-bottom:2rem;
+}
+
+h2{
+    font-size:2.6rem;
+	line-height:normal;
+	color:$secondary-color-8;
+	margin-bottom:3rem;
+}
+
+h3{
+    font-size:2.4rem;
+	line-height:normal;
+	color:$secondary-color-8;
+	margin-bottom:3rem;
+}
+
+h4{
+    font-size:2.2rem;
+	line-height:1.2;
+	color:$secondary-color-8;
+	margin-bottom:2rem;
+}
+
+h5{
+    font-size:2rem;
+	line-height:1.2;
+	color:$secondary-color-8;
+	margin-bottom:2rem;
+}
+
+h6{
+    font-size:1.8rem;
+	line-height:1.2;
+	color:$secondary-color-8;
+	margin-bottom:2rem;
+}
+
+ul{
+    padding-left:2rem;
+	list-style-type:disc;
+}
+
+ul li{
+	margin-bottom:1.7rem;
+}
+
+ul li ul {
+    margin-top:1.7rem;
+}
+
+ol{
+	padding-left:2rem;
+	list-style-type:decimal;
+}
+
+ol li{
+	margin-bottom:1.7rem;
+}
+
+ol li ol {
+    margin-top:1.7rem;
+}
+strong{
+	font-weight:600;
+}
+em{
+	font-style: italic;
+}
+/* ========== base style ends ========== */
