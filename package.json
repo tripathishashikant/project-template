@@ -1,21 +1,14 @@
 {
-  "name": "spalt",
+  "name": "project-template",
   "version": "1.0.0",
-  "description": "spalt npm packages",
-  "main": "gulpfile.js",
+  "description": "It is going to be the starting point for my all projects",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "http-server -a localhost -p 3000 -c-1"
   },
-  "author": "demipat99",
+  "author": "tripathishashikant",
   "license": "ISC",
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^6.0.0",
-    "gulp-imagemin": "^5.0.3",
-    "gulp-sass": "^4.0.2",
-    "gulp-sourcemaps": "^2.6.4",
-    "gulp-uglify": "^2.0.0",
-    "http-server": "0.9.0"
+    "gulp": "^4.0.2"
   }
 }
