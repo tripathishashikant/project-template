@@ -1,25 +1,38 @@
-var gulp = require('gulp');
-var sass = require('gulp-sass');
-var sourcemaps = require('gulp-sourcemaps');
-var autoprefixer = require('gulp-autoprefixer');
-var uglify = require('gulp-uglify');
+const gulp          = require('gulp'),
+      autoprefixer  = require('gulp-autoprefixer'),
+      sass          = require('gulp-sass'),
+      uglify        = require('gulp-uglify');
 
-gulp.task('sassify', () => {
-  return gulp.src('./src/scss/style.scss')
-          .pipe(sourcemaps.init())
-          .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
-          .pipe(autoprefixer('last 2 version'))
-          .pipe(sourcemaps.write('./'))
-          .pipe(gulp.dest('./dist/css'))    
+const root          = './',
+      scss          = root + 'src/scss/',
+      css           = root + 'dist/css/',
+      js            = root + 'src/js/',
+      jsDist        = root + 'dist/js/';
+
+const styleWatchFiles = scss + '**/*.scss';
+
+const jsSrc = [
+      js + 'jquery-3.4.1.min.js',
+      js + 'skip-link-focus.min.js',
+      js + 'scripts.js'
+];
+
+gulp.task('sass', () => {
+  return gulp.src(scss + 'style.scss', { sourcemaps: true })
+    .pipe(sass({
+      outputStyle: 'compressed'
+    }).on('error', sass.logError))
+    .pipe(autoprefixer('last 2 versions'))
+    .pipe(gulp.dest(css, { sourcemaps: '.' }));
 });
 
 gulp.task('jsminify', () => {
-  return gulp.src('./src/js/**/*.js')
+  return gulp.src(jsSrc)
     .pipe(uglify())
-    .pipe(gulp.dest('./dist/js'))
+    .pipe(gulp.dest(jsDist))
 });
 
 gulp.task('default', () => {
-  gulp.watch('./src/scss/*',gulp.series(['sassify']));
-  gulp.watch('./src/js/*',gulp.series(['jsminify']));
+  gulp.watch(jsSrc, gulp.series(['jsminify']));
+  gulp.watch(styleWatchFiles, gulp.series(['sass']));
 });
