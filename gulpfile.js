@@ -1,7 +1,8 @@
 const gulp          = require('gulp'),
       autoprefixer  = require('gulp-autoprefixer'),
       sass          = require('gulp-sass'),
-      uglify        = require('gulp-uglify');
+      uglify        = require('gulp-uglify'),
+      concat        = require('gulp-concat');
 
 const root          = './',
       scss          = root + 'src/scss/',
@@ -27,6 +28,7 @@ gulp.task('sass', () => {
 
 gulp.task('jsminify', () => {
   return gulp.src(jsSrc)
+    .pipe(concat('scripts.js'))
     .pipe(uglify())
     .pipe(gulp.dest(jsDist))
 });
