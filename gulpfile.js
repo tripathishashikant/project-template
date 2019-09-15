@@ -6,7 +6,7 @@ const gulp          = require('gulp'),
 
 const root          = './',
       scss          = root + 'src/scss/',
-      css           = root + 'dist/css/',
+      cssDist       = root + 'dist/css/',
       js            = root + 'src/js/',
       jsDist        = root + 'dist/js/';
 
@@ -17,23 +17,30 @@ const jsSrc = [
       js + 'scripts.js'
 ];
 
-gulp.task('sass', () => {
+function css() {
   return gulp.src(scss + 'style.scss', { sourcemaps: true })
     .pipe(sass({
       outputStyle: 'compressed'
     }).on('error', sass.logError))
     .pipe(autoprefixer('last 2 versions'))
-    .pipe(gulp.dest(css, { sourcemaps: '.' }));
-});
+    .pipe(gulp.dest(cssDist, { sourcemaps: '.' }));
+}
 
-gulp.task('jsminify', () => {
+function javascript() {
   return gulp.src(jsSrc)
     .pipe(concat('scripts.js'))
     .pipe(uglify())
     .pipe(gulp.dest(jsDist))
-});
+}
 
-gulp.task('default', () => {
-  gulp.watch(jsSrc, gulp.series(['jsminify']));
-  gulp.watch(styleWatchFiles, gulp.series(['sass']));
-});
+function watch() {
+  gulp.watch(jsSrc, gulp.series(javascript));
+  gulp.watch(styleWatchFiles, gulp.series(css));
+}
+
+exports.css = css;
+exports.javascript = javascript;
+exports.watch = watch;
+
+const build = gulp.series(watch);
+gulp.task('default', build);
