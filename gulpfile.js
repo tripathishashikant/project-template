@@ -1,7 +1,7 @@
 const gulp          = require('gulp'),
       autoprefixer  = require('gulp-autoprefixer'),
       sass          = require('gulp-sass'),
-      uglify        = require('gulp-uglify'),
+      uglify        = require('gulp-uglify-es').default,
       concat        = require('gulp-concat');
 
 const root          = './',
@@ -30,7 +30,7 @@ function javascript() {
   return gulp.src(jsSrc)
     .pipe(concat('scripts.js'))
     .pipe(uglify())
-    .pipe(gulp.dest(jsDist))
+    .pipe(gulp.dest(jsDist));
 }
 
 function watch() {
