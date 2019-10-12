@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 <head>
   <title>Project Template</title>
 
@@ -45,12 +45,26 @@
 
   <!-- css -->
   <link rel="stylesheet" href="./dist/css/style.css">
+
+  <!-- HTML5 element support for IE6-8 -->
+  <!--[if lt IE 9]>
+    <script src="https://cdn.jsdelivr.net/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+  <!-- Global site tag - Google Analytics -->
     
 </head>
 
 <body id="homepage" class="homepage">
 
   <section class="page">
+
+    <!-- when javascript is disabled use below script to notify user and 
+         style any hidden element which is not visible due to js functionality  -->
+    <noscript>
+      <style></style>
+      <h1>Sorry, your browser does not support JavaScript!</h1>
+    </noscript>
+
     <!-- skip to mail content -->
     <a href="#mainContent" class="visually-hidden">
       Skip to main content
@@ -61,6 +75,17 @@
     <main id="mainContent"></main>
 
     <footer></footer>
+
+    <!-- back to top starts -->
+    <div class="backtotop">
+      <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="-2px" y="1px"
+        width="40px" height="40px" viewBox="0 0 45 44">
+        <polygon fill="none"
+          points="31.041,24.704 22.821,16.483 22.821,16.484 22.82,16.483 14.601,24.703 17.163,27.267 22.82,21.609 28.478,27.267 ">
+        </polygon>
+      </svg>
+    </div>
+  <!-- back to top ends -->
   </section>
 
   <!-- common js file -->
