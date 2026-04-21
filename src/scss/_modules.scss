@@ -35,3 +35,38 @@
   }
 }
 /* ---------- back to top ends ---------- */
+
+/* ---------- accordion starts ---------- */
+.accordion {
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+
+  &.active {
+    .accordion__title {
+      background-color: #f9f9f9;
+    }
+  }
+
+  &__title {
+    padding: 15px;
+    cursor: pointer;
+    background-color: #eee;
+    font-weight: bold;
+    display: block;
+    text-decoration: none;
+    color: #333;
+
+    &:hover {
+      background-color: #f0f0f0;
+      text-decoration: none;
+      color: #333;
+    }
+  }
+
+  &__content {
+    padding: 15px;
+    display: none;
+    border-top: 1px solid #ddd;
+  }
+}
+/* ---------- accordion ends ---------- */

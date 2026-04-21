@@ -1,15 +1,23 @@
 {
   "name": "project-template",
   "version": "1.0.0",
+  "type": "module",
   "description": "It is going to be the starting point for my all projects",
   "author": "tripathishashikant",
   "license": "GPL-3.0",
   "devDependencies": {
-    "gulp": "^4.0.2",
-    "gulp-autoprefixer": "^7.0.0",
-    "gulp-concat": "^2.6.1",
-    "gulp-sass": "^4.0.2",
-    "gulp-uglify-es": "^1.0.4"
+    "autoprefixer": "^10.4.17",
+    "postcss": "^8.4.35",
+    "sass": "^1.70.0",
+    "vite": "^5.1.0",
+    "vite-plugin-html-inject": "^1.1.2"
   },
-  "dependencies": {}
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "jquery": "^4.0.0"
+  }
 }

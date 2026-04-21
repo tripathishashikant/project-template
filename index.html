@@ -20,31 +20,31 @@
 	<meta name="mobile-web-app-capable" content="yes">
 	<meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="theme-color" content="#ffffff">
-  <meta name="msapplication-config" content="./browserconfig.xml" />
+  <meta name="msapplication-config" content="/browserconfig.xml" />
 
   <!-- fonts -->
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700,800" rel="stylesheet">
 
 	<!-- Apple icons -->
-  <link rel="apple-touch-icon" href="./dist/images/manifest/apple-touch-icon-57x57.png" sizes="57x57">
-  <link rel="apple-touch-icon" href="./dist/images/manifest/apple-touch-icon-60x60.png" sizes="60x60">
-  <link rel="apple-touch-icon" href="./dist/images/manifest/apple-touch-icon-72x72.png" sizes="72x72">
-  <link rel="apple-touch-icon" href="./dist/images/manifest/apple-touch-icon-76x76.png" sizes="76x76">
-  <link rel="apple-touch-icon" href="./dist/images/manifest/apple-touch-icon-114x114.png" sizes="114x114">
-  <link rel="apple-touch-icon" href="./dist/images/manifest/apple-touch-icon-120x120.png" sizes="120x120">
-  <link rel="apple-touch-icon" href="./dist/images/manifest/apple-touch-icon-144x144.png" sizes="144x144">
-  <link rel="apple-touch-icon" href="./dist/images/manifest/apple-touch-icon-152x152.png" sizes="152x152">
-	<link rel="apple-touch-icon" href="./dist/images/manifest/apple-touch-icon-180x180.png" sizes="180x180">
-  <link rel="apple-touch-icon-precomposed" href="./dist/images/manifest/apple-touch-icon-precomposed.png" sizes="180x180">
+  <link rel="apple-touch-icon" href="/images/manifest/apple-touch-icon-57x57.png" sizes="57x57">
+  <link rel="apple-touch-icon" href="/images/manifest/apple-touch-icon-60x60.png" sizes="60x60">
+  <link rel="apple-touch-icon" href="/images/manifest/apple-touch-icon-72x72.png" sizes="72x72">
+  <link rel="apple-touch-icon" href="/images/manifest/apple-touch-icon-76x76.png" sizes="76x76">
+  <link rel="apple-touch-icon" href="/images/manifest/apple-touch-icon-114x114.png" sizes="114x114">
+  <link rel="apple-touch-icon" href="/images/manifest/apple-touch-icon-120x120.png" sizes="120x120">
+  <link rel="apple-touch-icon" href="/images/manifest/apple-touch-icon-144x144.png" sizes="144x144">
+  <link rel="apple-touch-icon" href="/images/manifest/apple-touch-icon-152x152.png" sizes="152x152">
+	<link rel="apple-touch-icon" href="/images/manifest/apple-touch-icon-180x180.png" sizes="180x180">
+  <link rel="apple-touch-icon-precomposed" href="/images/manifest/apple-touch-icon-precomposed.png" sizes="180x180">
 
 	<!--Android (ältere Versionen)-->
-	<link rel="shortcut icon" href="./dist/images/manifest/favicon-180x180.png" sizes="180x180">
-  <link rel="icon" href="./dist/images/manifest/favicon-180x180.png" sizes="180x180">
-  <link rel="shortcut icon" href="./dist/images/manifest/favicon.ico" type="image/x-icon" sizes="16x16">
-  <link rel="manifest" href="./manifest.json">
+	<link rel="shortcut icon" href="/images/manifest/favicon-180x180.png" sizes="180x180">
+  <link rel="icon" href="/images/manifest/favicon-180x180.png" sizes="180x180">
+  <link rel="shortcut icon" href="/images/manifest/favicon.ico" type="image/x-icon" sizes="16x16">
+  <link rel="manifest" href="/manifest.json">
 
-  <!-- css -->
-  <link rel="stylesheet" href="./dist/css/style.css">
+  <!-- CSS and JS handled by Vite -->
+  <script type="module" src="/src/js/main.js"></script>
 
   <!-- HTML5 element support for IE6-8 -->
   <!--[if lt IE 9]>
@@ -70,11 +70,29 @@
       Skip to main content
     </a>
 
-    <header></header>
+    <load src="src/partials/header.html" />
 
-    <main id="mainContent"></main>
+    <main id="mainContent">
+      <div class="container">
+        <h1>Welcome to Project Template</h1>
+        <p>This is a starting point for your web projects with Vite, Sass, and jQuery.</p>
 
-    <footer></footer>
+        <div class="accordion">
+          <a href="#" class="accordion__title" data-id="section1">Section 1</a>
+          <div class="accordion__content">
+            <p>Content for section 1.</p>
+          </div>
+        </div>
+        <div class="accordion">
+          <a href="#" class="accordion__title" data-id="section2">Section 2</a>
+          <div class="accordion__content">
+            <p>Content for section 2.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <load src="src/partials/footer.html" />
 
     <!-- back to top starts -->
     <div class="backtotop">
@@ -88,7 +106,6 @@
   <!-- back to top ends -->
   </section>
 
-  <!-- common js file -->
-  <script src="./dist/js/scripts.js" type="application/javascript"></script>
+
 </body>
 </html>
